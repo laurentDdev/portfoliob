@@ -4,9 +4,9 @@ import { validateProject } from "../../validators/project.validator";
 
 const ProjectRouter : Router = express.Router();
 
-ProjectRouter.get("/projects", ProjectController.getAllProjects);
+ProjectRouter.get("/", ProjectController.getAllProjects);
 ProjectRouter.get("/project/:id", ProjectController.getProjectById);
-ProjectRouter.post("/projects",validateProject, ProjectController.createProject);
+ProjectRouter.post("/",validateProject, ProjectController.createProject);
 
 
 export default ProjectRouter;

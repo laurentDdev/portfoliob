@@ -1,12 +1,12 @@
 import express, { Application } from "express"
 import dotenv from "dotenv"
-import ProjectRouter from "./routes/project.route"
+import router from "./routes/route"
 dotenv.config()
 const app: Application = express()
 
 app.use(express.json())
 
-app.use(ProjectRouter)
+app.use("/api/v1", router)
 
 
 
